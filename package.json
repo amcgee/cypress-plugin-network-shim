@@ -1,0 +1,12 @@
+{
+  "name": "cypress-plugin-network-shim",
+  "version": "1.0.0",
+  "description": "A plugin for Cypress.io tests enabling record and replay of application network requests.",
+  "main": "index.js",
+  "repository": "https://github.com/amcgee/cypress-plugin-network-shim",
+  "author": "Austin McGee <me@austinmcgee.net>",
+  "license": "BSD-3-Clause",
+  "peerDependencies": {
+    "cypress": "^3"
+  }
+}
