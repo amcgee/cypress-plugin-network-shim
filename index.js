@@ -36,27 +36,28 @@ const enable = options => {
     });
 };
 
-const theShimNamespace = {
-    _enabled: false,
-    _defaults: {},
-    enable(options) {
-        const config = { ...this._defaults, ...options };
-        config.specName = config.specName || getSpecName();
-        if (checkConfig) {
-            this._enabled = true;
-            return enable(config);
-        }
-    },
-    defaults(config) {
-        this._defaults = { ...config };
-        return this._defaults;
-    },
-    get enabled() {
-        return this._enabled;
-    },
-    get config() {
-        return getConfig(this._defaults);
-    },
-};
+const initialize = (defaults = {}) => {
+    Cypress.NetworkShim = {
+        _enabled: false,
+        _defaults: defaults,
+        enable(options) {
+            const config = { ...this._defaults, ...options };
+            config.specName = config.specName || getSpecName();
+            if (checkConfig) {
+                this._enabled = true;
+                return enable(config);
+            }
+        },
+        get enabled() {
+            return this._enabled;
+        },
+        get config() {
+            return getConfig(this._defaults);
+        },
+    };
 
-Cypress.NetworkShim = theShimNamespace;
+    Cypress.NetworkShim = theShimNamespace;
+}
+
+export default initialize;
+export { MODES } from './src/constants';
