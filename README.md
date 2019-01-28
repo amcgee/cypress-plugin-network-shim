@@ -1,5 +1,8 @@
 # cypress-plugin-network-shim
 
+![npm](https://img.shields.io/npm/v/cypress-plugin-network-shim.svg)
+![travis build](https://img.shields.io/travis/amcgee/cypress-plugin-network-shim.svg)
+
 This is a utility for Cypress.io end-to-end testing which enables recording snapshots of real backend traffic.
 
 The generated snapshots can then be used to replay or "stub" the network on subsequent test runs, effectively mocking out the server to increase test repeatability and performance.
