@@ -1,7 +1,7 @@
 # cypress-plugin-network-shim
 
-![npm](https://img.shields.io/npm/v/cypress-plugin-network-shim.svg)
-![travis build](https://img.shields.io/travis/amcgee/cypress-plugin-network-shim.svg)
+[![npm](https://img.shields.io/npm/v/cypress-plugin-network-shim.svg)](https://npmjs.com/package/cypress-plugin-network-shim)
+[![travis build](https://img.shields.io/travis/amcgee/cypress-plugin-network-shim.svg)](https://travis-ci.org/amcgee/cypress-plugin-network-shim)
 
 This is a utility for Cypress.io end-to-end testing which enables recording snapshots of real backend traffic.
 
