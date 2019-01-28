@@ -1,0 +1,10 @@
+{
+  "presets": [
+    ["@babel/env", {
+      "modules": false // Module transpilation is performed by rollup
+    }]
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties"
+  ]
+}

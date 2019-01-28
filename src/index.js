@@ -1,8 +1,8 @@
 /* global Cypress, cy, afterEach, before, after */
 
-import { getConfig } from './src/config';
-import { getSpecName } from './src/utils';
-import NetworkShim from './src/NetworkShim';
+import { getConfig } from './config';
+import { getSpecName } from './utils';
+import NetworkShim from './NetworkShim';
 
 const checkConfig = config => {
     return config.specName;
@@ -55,9 +55,7 @@ const initialize = (defaults = {}) => {
             return getConfig(this._defaults);
         },
     };
-
-    Cypress.NetworkShim = theShimNamespace;
 }
 
 export default initialize;
-export { MODES } from './src/constants';
+export { MODES } from './constants';

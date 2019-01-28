@@ -1,0 +1,17 @@
+{
+  "name": "cypress-plugin-network-shim-example",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "cy:run": "cypress run --config video=false",
+    "cy:open": "cypress open",
+    "test": "concurrently --kill-others --success first -n server,test \"yarn start\" \"yarn cy:run\"",
+    "start": "serve public"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "cypress": "^3.1.4",
+    "serve": "^10.1.1"
+  }
+}
