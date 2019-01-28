@@ -1,0 +1,8 @@
+language: node_js
+sudo: false
+node_js: 8
+install:
+  - yarn install --frozen-lockfile
+script:
+  - yarn build # Does nothing for now
+  - yarn test # Does nothing for now
