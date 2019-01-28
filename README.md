@@ -55,7 +55,8 @@ OR
 To set default app-wide network shim configuration, in `cypress/support/index.js` add the following:
 
 ```js
-Cypress.NetworkShim.defaults({
+import initNetworkShim from 'cypress-plugin-network-shim'
+initNetworkShim({
   hosts: {
     'api': 'https://api.example.com'
   }
