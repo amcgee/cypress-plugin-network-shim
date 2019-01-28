@@ -1,4 +1,4 @@
-import initNetworkShim from '../../../'
+import initNetworkShim from 'cypress-plugin-network-shim'
 
 initNetworkShim();
 
