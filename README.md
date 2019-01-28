@@ -24,6 +24,15 @@ yarn install --dev cypress
 yarn install --dev cypress-plugin-network-shim
 ```
 
+In `cypress/support/index.js` initialize the Network Shim:
+
+```js
+import initNetworkShim from 'cypress-plugin-network-shim'
+
+initNetworkShim();
+// Cypress.NetworkShim should now be accessible from any Cypress support or test file
+```
+
 In a test file, i.e. `cypress/integration/test.spec.js`, add the following:
 
 ```js
@@ -52,10 +61,11 @@ OR
 
 ## Configuration
 
-To set default app-wide network shim configuration, in `cypress/support/index.js` add the following:
+To set default app-wide network shim configuration, pass a configuration object to `initNetworkShim` in `cypress/support/index.js`:
 
 ```js
 import initNetworkShim from 'cypress-plugin-network-shim'
+
 initNetworkShim({
   hosts: {
     'api': 'https://api.example.com'
