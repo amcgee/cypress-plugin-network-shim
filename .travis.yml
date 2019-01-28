@@ -3,6 +3,6 @@ sudo: false
 node_js: 8
 install:
   - yarn install --frozen-lockfile
-script:
+scripts:
   - yarn build # Does nothing for now
   - yarn test # Does nothing for now
