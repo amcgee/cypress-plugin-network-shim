@@ -9,7 +9,7 @@
   "peerDependencies": {
     "cypress": "^3"
   },
-  "script": {
+  "scripts": {
     "build": "echo \"No build yet\"",
     "test": "echo \"No tests yet!\""
   }
