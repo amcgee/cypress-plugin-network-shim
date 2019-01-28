@@ -2,7 +2,15 @@ language: node_js
 sudo: false
 node_js: 8
 install:
-  - yarn install --frozen-lockfile
+- yarn install --frozen-lockfile
 script:
-  - yarn build # Does nothing for now
-  - yarn test # Does nothing for now
+- yarn build
+- yarn test
+deploy:
+  provider: npm
+  email: npm-noreply@austinmcgee.net
+  api_key:
+    secure: eYruOFIlf5dZqSmLWN00zGPr7VZY7I53ak4n5eYCZE1cmn0wY1lL3GYAACJ6GQDmT7A17SmTmAKE+4D1ECxGMZxwWN0p0/esWczAGlYTxdFJCiRPYc9h9Cfm2viAe1vYAjDyrK2SYfG8AToddVjBBB6TIj2tixCYATLb12srZdXUtm8EEZd3UQeYeMMuD9AriZrTY4OJOhDuAEufb8z09YJwUkUAf2V2pcmsrUGU/bpOTEvmeFFnjKfGoGkm8t/x7T/X1DxK1yyfM2bLyz/xK3EjNz9eGimDpHGlQ3eu9oTSmA84AcRHHaX3Q88K19HisfeubOjMS4/KrRw6PL9MiWPcbFTPW15wV4bIFp6oYRiVSBY7cyDzRhWK1v1vpSJTqxkZ6PfR2yS18LqpubqKgZObocu+3zAhJq0QOZZVBCCQqSHEjLfbgKiCcTivLR9nmeMspbOOG4FzMRgWZYll/BXH8+QJXjNEKNo2bN12foOpzgbnBmCx71tEIFoDbkQdqIs8hU8tg7QFGwiOnwOvwPP8YOFQDNOaDHIc7kuQSt/9rHF99Zb5H0wtInXBlnZv/JAZp+F8OR1in2avOELwcF0EY9qZnWpvzdoTVIJvQjCeXwMcQAAN4r8mONam6ncgXcJx9EvMqR6WGihxi5NTGTLXrtb5D0vwYHa/5sDAuoE=
+  on:
+    tags: true
+    repo: amcgee/cypress-plugin-network-shim
